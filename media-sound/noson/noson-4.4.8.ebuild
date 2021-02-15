@@ -22,6 +22,14 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+src_configure() {
+	econf --with-posix-regex
+}
+
+src_install() {
+	emake DESTDIR="${D}" install
+}
+
 pkg_postinst() {
    qt5-build_pkg_postinst
    gnome2_icon_cache_update
