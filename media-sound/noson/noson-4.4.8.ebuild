@@ -6,7 +6,7 @@ inherit cmake-utils gnome2-utils
 
 DESCRIPTION="The essential to control music from your SONOS devices on Linux platforms"
 HOMEPAGE="http://janbar.github.io/noson-app/index.html"
-SRC_URI="https://github.com/janbar/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/janbar/noson-app/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
