@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit cmake
+inherit cmake xdg-utils
 
 DESCRIPTION="The essential to control music from your SONOS devices on Linux platforms"
 HOMEPAGE="http://janbar.github.io/noson-app/index.html"
@@ -10,7 +10,6 @@ SRC_URI="https://github.com/janbar/noson-app/archive/${PV}.tar.gz -> ${P}.tar.gz
 
 S=${WORKDIR}
 
-echo "${WORKDIR}"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -31,4 +30,12 @@ CMAKE_USE_DIR="${WORKDIR}/${P}"
 src_configure() {
     mycmakeargs=(-DCMAKE_BUILD_TYPE=Release ..)
     cmake_src_configure
+}
+
+pkg_postinst() {
+   xdg_icon_cache_update
+}
+
+pkg_postrm() {
+   xdg_icon_cache_update
 }
