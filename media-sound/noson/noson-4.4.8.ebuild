@@ -25,7 +25,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-CMAKE_USE_DIR="${WORKDIR}/${P}/build"
+CMAKE_USE_DIR="${WORKDIR}"
 
 src_configure() {
     mycmakeargs=(-DCMAKE_BUILD_TYPE=Release ..)
