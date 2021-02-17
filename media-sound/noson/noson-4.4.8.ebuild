@@ -8,6 +8,8 @@ DESCRIPTION="The essential to control music from your SONOS devices on Linux pla
 HOMEPAGE="http://janbar.github.io/noson-app/index.html"
 SRC_URI="https://github.com/janbar/noson-app/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
+S=${WORKDIR}
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
