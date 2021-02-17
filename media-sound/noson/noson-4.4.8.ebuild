@@ -25,10 +25,6 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-src_prepare() {
-   cmake_src_prepare
-}
-
 src_configure() {
     mycmakeargs=(-DCMAKE_BUILD_TYPE=Release ..)
     cmake_src_configure
