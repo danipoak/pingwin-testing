@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit gnome2-utils gnome2 qmake-utils cmake
+inherit cmake
 
 DESCRIPTION="The essential to control music from your SONOS devices on Linux platforms"
 HOMEPAGE="http://janbar.github.io/noson-app/index.html"
@@ -31,14 +31,4 @@ CMAKE_USE_DIR="${WORKDIR}/${P}"
 src_configure() {
     mycmakeargs=(-DCMAKE_BUILD_TYPE=Release ..)
     cmake_src_configure
-}
-
-pkg_postinst() {
-   qt5-build_pkg_postinst
-   gnome2_icon_cache_update
-}
-
-pkg_postrm() {
-   qt5-build_pkg_postrm
-   gnome2_icon_cache_update
 }
