@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
-inherit gnome2-utils gnome2 qmake-utils
+inherit gnome2-utils gnome2 qmake-utils cmake
 
 DESCRIPTION="The essential to control music from your SONOS devices on Linux platforms"
 HOMEPAGE="http://janbar.github.io/noson-app/index.html"
@@ -23,10 +23,6 @@ DEPEND="
    dev-libs/openssl:0
 "
 RDEPEND="${DEPEND}"
-
-src_configure() {
-   econf --with-posix-regex
-}
 
 pkg_postinst() {
    qt5-build_pkg_postinst
