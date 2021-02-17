@@ -25,7 +25,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_configure() {
-   cmake_src_configure
+   cmake_src_prepare
 }
 
 pkg_postinst() {
