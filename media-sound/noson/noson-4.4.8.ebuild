@@ -20,12 +20,18 @@ DEPEND="
    >=dev-qt/qttranslations-5.9
    >=dev-qt/qtgui-5.9
    >=dev-qt/qtquickcontrols2-5.9
+   >=dev-util/cmake-3.8.2
    dev-libs/openssl:0
 "
 RDEPEND="${DEPEND}"
 
 src_prepare() {
    cmake_src_prepare
+}
+
+src_configure() {
+    mycmakeargs=(-DCMAKE_BUILD_TYPE=Release ..)
+    cmake_src_configure
 }
 
 pkg_postinst() {
