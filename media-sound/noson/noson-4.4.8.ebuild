@@ -24,6 +24,10 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+src_configure() {
+   cmake_src_configure
+}
+
 pkg_postinst() {
    qt5-build_pkg_postinst
    gnome2_icon_cache_update
