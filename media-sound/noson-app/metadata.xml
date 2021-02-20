@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer type="danipoak">
+  <maintainer type="person">
     <email>danipo@gmail.com</email>
-    <name>sburnham</name>
+    <name>Steve Burnham</name>
   </maintainer>
-  <longdescription lang="en">
-    Sonos controller for Linux
-  </longdescription>
-  <upstream>
-    <remote-id type="github">noson</remote-id>
-    <bugs-to>https://github.com/janbar/noson-app/issues</bugs-to>
-  </upstream>
 </pkgmetadata>
